@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="utf-8">
+		<title>商品详情</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+
+		<link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+		<link rel="stylesheet" type="text/css" href="../css/uikit.css" />
+
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	</head>
+
+	<body>
+		<header>
+			<div class="addWrap">
+				<div class="swipe" id="mySwipe">
+					<div class="swipe-wrap">
+						<div>
+							<a href=""><img class="img-responsive" src="../images/11.jpg" /></a>
+						</div>
+						<div>
+							<a href=""><img class="img-responsive" src="../images/12.jpg" /></a>
+						</div>
+						<div>
+							<a href=""><img class="img-responsive" src="../images/13.jpg" /></a>
+						</div>
+						<div>
+							<a href=""><img class="img-responsive" src="../images/14.jpg" /></a>
+						</div>
+					</div>
+				</div>
+				<ul id="position">
+					<li class="cur"></li>
+					<li class=""></li>
+					<li class=""></li>
+					<li class=""></li>
+				</ul>
+			</div>
+		</header>
+		<section class="width95">
+			<h2 class="f16 fb mt20 mb15">苹果手表Apple Watch Sport</h2>
+			<div>
+				<p class="mb6"><span class="fcmain fb f20 mr5">8800</span>积分</p>
+				<p class="mb6">剩余数量：<span>1</span></p>
+				<p class="mb6">兑换结束时间：<span>2015-06-11 00:00:00</span></p>
+			</div>
+			<section class="mt30">
+				<h2 class="fcyellow f16 mb3">商品描述</h2>
+				<div >
+					<p>商品编号：65456</p>
+					<p>品牌：漫步者</p>
+					<p>上架时间：2012-06-06 10:22:22</p>
+					<p>商品毛重：202.00g</p>
+					<p>商品产地：中国大陆</p>
+					<p>功能用途：音乐耳机，电脑耳麦，专业游戏</p>
+					<p>发声原理：动圈</p>
+					<p>
+						<img src="../images/11.jpg" class="w-h-100"/>
+					</p>
+				</div>
+			</section>
+			<section class="mt30">
+				<h2  class="fcyellow f16 mb3">兑换规则</h2>
+				<div>
+					<p class="mb5">1. 联系时间：周一至周六09:00-18:00，配送范围：全国（除西藏及港澳台地区外）均可配送；</p>
+					<p class="mb5">2. 快递公司：本单使用申通快递、圆通快递；</p>
+					<p class="mb5">3. 兑换费用：本单邮费0.00元，购买一件及以上包邮；</p>
+					<p class="mb5">4. 配送时间：购买成功后2天内发货，3-7天送达；</p>
+					<p class="mb5">5. 售后保障，如需退换货，请进入我的订单。</p>
+				</div>
+			</section>
+		</section>
+		<!--底部导航   <a>-->
+		<div class="mt100"></div>
+		<footer class="foot tc foot_rgba">
+			<div class="width95">
+				<a href="javascript:history.go(-1);" class="fl mt10 ">
+					<span class="go_back"><img src="../images/icon/icon-left-50.png" style="width:30px;"/></span>
+				</a>
+				<a href="IntMall_confirm.html" class="start_button mt4 mb3 text-center fcwhite">
+						立即兑换
+			    </a>
+				<a href="../index.html" class="fr mt10">
+					<span class="home"><img src="../images/icon/icon-home-50.png" style="width:30px;"/></span>
+				</a>
+			</div>
+		</footer>
+	</body>
+	<script src="../js/h_swipe.js"></script>
+	<script type="text/javascript">
+		var bullets = document.getElementById('position').getElementsByTagName('li');
+		var banner = Swipe(document.getElementById('mySwipe'), {
+			auto: 2000,
+			continuous: true,
+			disableScroll: false,
+			callback: function(pos) {
+				var i = bullets.length;
+				while (i--) {
+					bullets[i].className = ' ';
+				}
+				bullets[pos].className = 'cur';
+			}
+		});
+	</script>
+
+</html>

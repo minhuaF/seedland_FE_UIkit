@@ -1,0 +1,219 @@
+
+
+
+/*---------------我的钱包icon--------------*/
+.credit-card-icon{background-image:url(../images/icon/icos-wallet.png);background-position:0px 0px;width:30px;height:30px;left:15px;top:8px;}
+.wait-settle-icon{background-image:url(../images/icon/icos-wallet.png);background-position:0px -70px;width:30px;height:30px;left:15px;top:10px;}
+.has-settle-icon{background-image:url(../images/icon/icos-wallet.png);background-position:0px -139px;width:40px;height:40px;left:15px;top:11px;}
+
+/*---------------我的积分商城icon--------------*/
+.gift-icon{background-image:url(../images/icon/icos-integral.png);background-position:0px -70px;width:40px;height:40px;left:15px;top:6px;}
+
+
+/*---------------我的等级----------------*/
+
+.grades-header{padding:15px 10px;background:#252f39;}
+.grades-header .left{width:30%;}
+.grades-header .left img{width:100%;}
+.grades-header .right{width:64%;padding-left:5%;color:#ebb53b;}
+.grades-header .right p{padding:3px 0px;margin: 5px 0 5px 0;}
+.grades-header .right img{margin-top: -6px;}
+
+.grades-list h1{width:120px;margin:0px auto;height:40px;border-radius:20px;line-height:40px;background:#e0583e;}
+.grades-list section{width:94%;height:50px;background:#fff;border:1px solid #ededed;line-height:50px;margin:0 auto;margin-top: 10px;}
+.grades-list h2{line-height: 50px;width:50px;height:50px;background:#e0583e}
+.grades-list img{width:40px;padding:0px 5px;}
+
+
+/*-------------------我的客户-----------------*/
+
+.search{background-color: #CCCCCC}
+.client{border-bottom: 1px solid #CCCCCC;}
+
+/*--------------------登陆------------------*/
+.login_header{background-image: -webkit-linear-gradient(top,red,#FF4500);}
+.login_header .login_logo img{height: 100px;width: 100px;background-color: #fff;border:2px solid #FF4500; position: relative;border-radius: 50%;padding: 10px;}
+
+/*----------------------注册-------------------*/
+input[type="checkbox"]{border-radius: 3px;}
+select[name="P1"]{border: none;}
+select[name="C1"]{margin-left: -5px;border: none;}
+
+/*------------------商城表单--------------------*/
+select[name="province2"],select[name="city"],select[name="area"]{border: none;}
+
+
+/*-----------------------首页---------------------*/
+
+.main_menu ul li{width:33%;float:left;text-align:center;border-bottom:1px solid #e3e3e3;border-left:1px solid #e3e3e3;padding:10px 0px;}
+.main_menu ul li img{width:40%;}
+.main_menu ul li p{padding-top:5px;color: black;}
+.prj-list .Pic img{border-top-left-radius: 2px;border-top-right-radius:2px;}
+.prj-list .Pic .text{ line-height:1.5;width:100%;background-color:rgba(0,0,0,0.5);padding: 2%;box-sizing: border-box;}
+.prj-list .button{border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;border-bottom: 1px solid #CCCCCC;border-left: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC;}
+.prj-list .button a{font-weight: 900;color:#ea280e;font-family: "微软雅黑";}
+.prj-list .right_button{top: 3%;right: 3%;padding: 2%;border-radius: 3px;background-color:rgba(0,0,0,0.5);}
+
+/*首页头部*/
+.indexHead_menu ul li{width: 24%;float: right;margin: 6px 0;color:#000000;border-left: 1px solid #E5E5E5;}
+.indexHead_menu .li-last{border-left:none;}
+.msg_tips{border-radius: 50%;width:30px;height:30px;position:absolute;background-image:url(../images/icon/ico-msg.png);background-repeat:no-repeat;background-size:contain;background-color: rgba(0,0,0,0.5);}
+.portrait{margin-top: -40px;border: 3px solid #777777;border-radius: 50%;}
+.portrait img{border-radius: 50%;width: 100%;}
+.indexHead_msg .name{margin-top: -30px;position: absolute;right: 50%;}
+.setting{right: 45px;top: 20px;}
+.setting a{display: inline-block;vertical-align: top;}
+.setting a:first-child{background-color: rgba(0,0,0,0.5);padding: 5px 6px;border-radius: 35%;}
+
+/*----------我的积分--------*/
+.intNav-header{background:#252f3a;padding:25px 15px;}
+.intNav-header p{width: 50%;float:left;height:50px;float:left;line-height:50px;}
+.intNav-header p:first-child{background-color: #FFFFFF;}
+.intNav-header p:last-child{background-color: #e0583d;}
+
+/*-------------积分商城---------------*/
+/*积分商城首页缩略图*/
+.ico-coin{width:20px;height:20px;}
+.ico-clock{}
+.inventory{padding:2px 5px;border-radius: 3px;}
+.intIndex-thumbnail{width: 49%}
+.limit{border-bottom: 1px solid #C8C8C8;}
+
+ .goods_list li{border: 1px solid #EEEEEE;width: 48%;display: inline-block;margin-bottom: 15px;margin-top:2px;min-height: 220px;vertical-align: top;}
+
+.intIndex-header{background-color: #f8931f}
+.intIndex-header a{border: 1px solid #FFFFFF;border-radius: 3px;}
+
+/*兑换记录*/
+.RedItem1{border: 1px solid #f8931f;border-radius: 5px;}
+.RedItem1 div:last-child{background-color: #f8931f}
+
+.RedItem2{border: 1px solid #CCCCCC;border-radius: 5px;}
+.RedItem2 div:last-child{background-color: #CCCCCC}
+
+/*邮寄地址*/
+#provinces select[name="province"]{border-right: none;border-bottom-left-radius: 4px;border-top-left-radius: 4px;width: 38%;}
+#provinces select[name="city"]{border-right: none;border-left: none;width: 29%;margin-left: -2%;}
+#provinces select[name="area"]{border-left: none;border-bottom-right-radius: 4px;border-top-right-radius: 4px;width: 35%;margin-left: -3%;}
+
+/*确认兑换*/
+#city ul li{border: 1px solid #F8931F;display: inline-block;border-radius: 4px;padding:8px 19px;margin: 4px;}
+.city_active{background-color: #F8931F;color: #FFFFFF;}
+
+
+/*积分明细*/
+.int-list{border-top: 1px solid #CCCCCC;}
+.int-list li{float: left;padding-top: 7px;padding-bottom: 7px;}
+
+
+/*-----------------------设置--------------------------*/
+.sign-ico{background-image:url(../images/icon/icos-022.png);background-repeat:no-repeat;background-position:0px -149px;width:40px;height:40px;display:block;position:absolute;left:15px;top:6px;}
+.personal-ico{background-image:url(../images/icon/icos-022.png);background-repeat:no-repeat;background-position:0px -222px;width:40px;height:40px;display:block;position:absolute;left:15px;top:6px;}
+
+/*------------------我的活动----------------*/
+/*--------我的活动---------*/
+.my-active-header{height:40px;line-height:40px;background:#252f39;}
+.my-active-header li{width:49%;float:left;height:40px;border-bottom:3px solid #252f39;text-align:center;}
+.my-active-header li.active{border-bottom:3px solid #e0583e;}
+.my-active-header li:nth-child(2){width:1%;float:left;}
+
+.my-active{padding:0px 10px;min-height:100px;}
+.my-active ul li{border-bottom:1px solid #c8c8c8;padding:15px 0px}
+.my-active ul li .left{width:35%;float:left;min-height:90px;}
+.my-active ul li .left img{border:1px solid #c8c8c8;width:100%;vertical-align:middle}
+.my-active ul li .right{width:62%;float:right;text-align:left;min-height:90px;position:relative;}
+.my-active ul li .right p{color:#656565;font-size: .9em;}
+.my-active ul li .right .title{display: block;display: -webkit-box;margin: 0 auto;line-height: 1.4;-webkit-line-clamp:3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;}
+.my-active ul li .right p{display: block;display: -webkit-box;margin: 0 auto;line-height: 1.4;-webkit-line-clamp:3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;}
+.my-active ul li .right .title{color:#313131;font-size:1.2em;font-weight: 600;padding:3px 0px 5px;}
+
+
+.active-list{border: 1px solid #E5E5E5;background-color: #FFFFFF}
+.active-list img{max-height: 300px;}
+
+
+/*消息中心*/
+/*背景颜色*/
+#message_center .clock{display: inline-block;background: url(../images/icon/icon_clock.png) no-repeat center bottom;width: 25px;height: 15px;}
+#message_center .more{text-align: right;background: url(../images/icon/icon_forward.png) no-repeat scroll right center transparent;padding: 0px 24px 0px 0px;}
+#message_center h2{margin-bottom: 3px;padding: 0px 0px 5px 25px;background-image: url(../images/icon/icon_speaker.png);background-repeat: no-repeat;font-size: 1.2em;color: #000000;font-weight: 400;border-bottom: 1px solid #ADADAD;}
+#message_center .new{content: url(../images/icon/icon_reddot.png);position: absolute;margin-top: -18px;margin-left: -12px;}
+.msg_center_back{background-color: #FFFFFF;padding: 10px;font-size: 1.2em;}
+.msg_center_back .back{background: url(../images/icon/icon_back.png) no-repeat center center;padding: 0px 0px 0px 30px;vertical-align: middle;}
+.msg_center_back .menu{background: url(../images/icon/icon_menu.png) no-repeat center center;padding: 0px 0px 0px 30px;}
+
+
+/*消息中心详情*/
+.msg_center_detail .top{background-color: #F8931F;padding: 15px;}
+.msg_center_detail .top .speaker{background: url(../images/icon/icon_gold.png) no-repeat bottom center;padding:30px;}
+.msg_center_detail .top .warning{background: url(../images/icon/icon_warning.png) no-repeat bottom center;padding:30px;}
+.msg_center_detail .detail{color: #888888;background-color: #FFFFFF}
+.msg_center_detail .detail h2{border-bottom: 1px solid #CCCCCC;}
+
+
+/*弹出窗口*/
+#nav{display: none; position: absolute;} 
+.triangle {position: absolute;margin-top: -8px;left: 26px;display: block;width: 0;height: 0;overflow: hidden;line-height: 0;font-size: 0;border-bottom: 8px solid #FFF;border-top: 8px solid #FFF;border-left: none;border-right: 8px solid #3079ED;}
+.demo .article {width: 100%;float: left;color: #FFF;display: inline-block;*display: inline;zoom: 1;padding: 5px ;/*border: 1px solid #999999;*/background: #eee;border-radius: 5px;background-color: #4D90FE;background-image: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#333333));background-image: -webkit-linear-gradient(top, #333333, #333333);background-image: -moz-linear-gradient(center top, #333333, #333333);background-image: linear-gradient(top, #333333, #333333);}
+.fr .triangle {margin-top: -16px;border-bottom:8px solid #333333;border-top: 8px solid #FFF;border-right: 8px solid #FFF;border-left: 8px solid #FFF;/*border: 1px solid red;*/}
+.fr .article {float: right;margin-right: 10px;}
+.name{font-weight: bolder;color: #000000;}
+
+
+
+/*----------------------验证码文本框------------------*/
+.check-button{border: none;height: 40px;border-bottom-right-radius: 4px;border-top-right-radius: 4px;border: 1px solid #dddddd!important;background-color: #FFFFFF}
+
+.search-button{height: 28px;border: none;border-left: 1px solid #dddddd!important;background-color: #FFFFFF}
+
+/*------------------------推荐客户----------------------*/
+.show ul li{ border: 1px solid #dddddd;display: inline-block;padding: 8px 8px;border-radius: 5px;margin: 9px 13px 0 0;}
+
+.mh-active{background-color: #f8cb41;color: #FFFFFF;border: 1px solid #f8cb41;}
+
+
+
+ /*------ 客户具体情况 ------*/
+.my-client-detail-2{color: #000000; width:80%;background-color: #fff;margin: 0 auto;margin-top: 30px;border-radius: 3px;padding: 15px 15px 10px 15px;line-height: 28px;}
+.my-client-detail-2 .name{color: orangered;font-weight: bolder;margin-left: 40px;margin-bottom: 6px;}
+.my-client-detail-2 p{margin-top: -20px;}
+.my-client-detail-2 ul li {float: left;width: 100%;text-align: center;background-color: #FF4500;margin-right: 5px;border-radius: 3px;color: #FFF;margin-top: 25px;}
+.my-client-detail-2-state{width: 80%;margin: 0 auto;background-color: #fff;padding: 15px;margin-top: 20px;}
+.my-client-detail-2-state ul li{height: 30px;border-bottom: 2px dashed #A8A8A8;margin-bottom: 10px;padding-bottom: 10px;}
+.my-client-detail-2-footer{position: absolute;width: 100%;margin-top: 20px;}
+.my-client-detail-2-footer p{text-align: center;bottom: 0px;}
+.my-client-detail-2-footer .copyright{text-align: center;font-size: 11px;width: 100%;/*background-color: red*/}
+.my-client-detail-ico01{background-image:url(../images/icon/my-client-detail-2.png);background-repeat:no-repeat;background-position:0px 0px;width:25px;height:30px;display:block;position:relative;top:23px;}
+.my-client-detail-ico02{background-image:url(../images/icon/my-client-detail-2.png);background-repeat:no-repeat;background-position:0px -50px;width:25px;height:30px;display:block;position:relative;top:27px;}
+.my-client-detail-ico03{background-image:url(../images/icon/my-client-detail-2.png);background-repeat:no-repeat;background-position:0px -100px;width:25px;height:30px;display:block;position:relative;top:29px;}
+
+
+
+
+
+
+
+
+
+
+
+
+/*===============================================================   后台管理    =================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

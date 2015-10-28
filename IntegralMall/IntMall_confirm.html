@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="utf-8">
+		<title>确认兑换</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+
+		<link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+		<link rel="stylesheet" type="text/css" href="../css/uikit.css" />
+
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	</head>
+
+	<body>
+		<header class="width95 pb5 pt10">
+			<p>漫步者（EDIFIER）K800高质量游戏耳机</p>
+			<p><span>8800</span>积分<span class="ml8 line-through" >市场参考价：1220元</span></p>
+		</header>
+		<hr />
+		<article class=" ">
+			<h2></h2>
+			<section class="bb1 width95 pb5">
+				<h2 class="fcyellow f16 mb3 mt20">取货说明</h2>
+				<div>
+					<p>1. 广州、深圳、贵州、遵义的用户选择所在城市，请凭商品兑换码前往线下地址核销；</p>
+					<p>2. 其他地区用户请认真填写邮寄地址和联系方式，商品将在兑换后2个工作日内寄出。</p>
+				</div>
+			</section>
+			<section class="bb1 width95">
+				<h2 class="fcyellow f16 mb3 mt20">选择您所在的城市</h2>
+				<div id="city">
+					<ul>
+						<li onclick="change(this);"><span>广州</span></li>
+						<li onclick="change(this);"><span>深圳</span></li>
+						<li onclick="change(this);"><span>贵州</span></li>
+						<li onclick="change(this);"><span>遵义</span></li>
+						<li onclick="change(this);"><span>其他</span></li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<h2 class="fcyellow f16 mb3 mt20 width95 pb3">线下兑换地址</h2>
+				<hr />
+				<a href="IntMall_add_form.html">
+					<div class="width95 clearfix pt5 pb5 fc444">
+						<p class=" width90 uk-display-inline-block uk-vertical-align-middle f14 ">
+							广州天河区体育路越秀站D出口天虹商场漫步者专柜漫步者专柜
+						</p>
+						<p class="uk-display-inline-block uk-vertical-align-middle uk-text-right width7">
+							<i class="uk-icon-angle-right uk-icon-large"></i>
+						</p>
+					</div>
+				</a>
+				<hr />
+			</section>
+		</article>
+		<!--底部导航   <a>-->
+		<div class="mt100"></div>
+		<footer class="foot tc foot_rgba">
+			<div class="width95">
+				<a href="javascript:history.go(-1);" class="fl mt10 ">
+					<span class="go_back"><img src="../images/icon/icon-left-50.png" style="width:30px;"/></span>
+				</a>
+				<a href="IntMall_success.html" class="start_button mt4 mb3 text-center fcwhite">
+						立即兑换
+			    </a>
+				<a href="../index.html" class="fr mt10">
+					<span class="home"><img src="../images/icon/icon-home-50.png" style="width:30px;"/></span>
+				</a>
+			</div>
+		</footer>
+	</body>
+	<script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+			$(function() {
+				$("#city ul li").click(function() {
+					$("#city ul li").removeClass("city_active");
+					$("#city ul li").removeAttr("checked");
+//					$(this).find("city_active").removeClass("city_active");
+					$(this).addClass("city_active");
+					$(this).attr("checked","checked");
+				});
+			});
+			function change(i) {}
+		</script>
+
+</html>

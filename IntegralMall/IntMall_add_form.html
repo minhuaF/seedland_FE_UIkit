@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="bg">
+
+	<head>
+		<meta charset="utf-8">
+		<title>详细邮寄地址</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+
+		<link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+		<link rel="stylesheet" type="text/css" href="../css/uikit.css" />
+
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	</head>
+
+	<body class=" pb20">
+		<div class="width95">
+			<form class="uk-form">
+
+				<div class="uk-grid">
+					<div class="uk-width-1-12 uk-form-icon mt10">
+						<i class="uk-icon-user"></i>
+						<input type="text" placeholder="请输入收货人姓名" class="uk-form-large uk-width-1-1">
+					</div>
+
+					<div class="uk-width-1-12 uk-form-icon mt10 ">
+						<i class="uk-icon-phone "></i>
+						<input type="tel" placeholder="请输入手机号" class="uk-form-large uk-width-1-1">
+					</div>
+
+					<div class="uk-width-1-12 uk-form-icon mt10 " id="provinces">
+						<div class="pl8" style="border: 1px solid #dddddd;background-color: #FFFFFF;">
+						<i class="uk-icon-home fc999"></i>
+						<select name="province2" class="uk-form-large fc999 width30"></select>
+						<select name="city" class=" uk-form-large fc999 width30"></select>
+						<select name="area" class=" uk-form-large fc999 width30"></select>
+					</div>
+					</div>
+					
+					<!--<div class="uk-width-1-12 uk-form-icon mt10 " id="provinces" >
+						<div class="pl8" style="border: 1px solid #dddddd;background-color: #FFFFFF;">
+						<i class="uk-icon-home fc999"></i>
+						<select name="P1" class="address uk-form-large  width45 fc999" ></select>
+						<select name="C1" class="province_select uk-form-large width50 fc999"></select>
+						</div>
+					</div>-->
+					
+					<div class="uk-width-1-12 uk-form-icon mt10 ">
+						<i class="uk-icon-road "></i>
+						<input type="tel" placeholder="请输入详细街道门牌信息" class="uk-form-large uk-width-1-1">
+					</div>
+
+					<div class="uk-width-1-12 uk-form-icon mt10 ">
+						<i class="uk-icon-envelope-square "></i>
+						<input type="tel" placeholder="请输入邮政编码" class="uk-form-large uk-width-1-1">
+					</div>
+
+				</div>
+
+				<button class="uk-button uk-button-primary uk-button-large uk-width-1-1 uk-margin-small-bottom mt20 pb4 button_active" type="submit">确认</button>
+			</form>
+		</div>
+		<!--底部导航   <a>-->
+		<div class="mt100"></div>
+		<footer class="foot tc foot_rgba">
+			<div class="width95">
+				<a href="javascript:history.go(-1);" class="fl mt10 ">
+					<span class="go_back"><img src="../images/icon/icon-left-50.png" style="width:30px;"/></span>
+				</a>
+				<!--<a href="" class="start_button mt4 mb3 text-center">
+						立即兑换
+			    </a>-->
+				<a href="../index.html" class="fr mt10">
+					<span class="home"><img src="../images/icon/icon-home-50.png" style="width:30px;"/></span>
+				</a>
+			</div>
+		</footer>
+	</body>
+
+	<script src="../js/PCASClass.js" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/javascript">
+		function change() {
+			var select1 = document.getElementById("select");
+			var other_address1 = document.getElementById("other_address");
+			if (select1.value == "其他") {
+				other_address1.style.display = "block";
+			}
+		}
+	</script>
+	<script language="javascript" defer>
+		new PCAS("province2", "city", "area");
+	</script>
+
+</html>

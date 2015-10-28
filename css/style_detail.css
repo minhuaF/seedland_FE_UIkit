@@ -1,0 +1,85 @@
+
+/*行距*/
+.lineHeight26{line-height: 26px;}
+
+/*字体间距*/
+.letterSpacing{letter-spacing:7px}
+
+/*正文样式*/
+.mainText p{text-indent: 2em;line-height: 23px;}
+
+/*背景图片*/
+.bimage{height: 20px;background-image: url(../images/prj_detail_img/detail_img/underline.png);background-repeat: no-repeat;background-size: 100%;}
+
+.appreciationNav{line-height: 28px;width: 98%;margin: 0 auto;padding: 10px 14px;box-sizing: border-box;}
+
+/*导航页的icon*/
+.nav_icon_introduction{display: inline-block;width:13px;height: 13px;background-image: url(../images/prj_detail_img/detail_img/icon_chrome.png);background-repeat: no-repeat;background-size: 100%;}
+.nav_icon_configuration{display: inline-block;width:13px;height: 13px;background-image: url(../images/prj_detail_img/detail_img/icon_arrow.png);background-repeat: no-repeat;background-size: 100%;}
+.nav_icon_appreciation{display: inline-block;width:13px;height: 13px;background-image: url(../images/prj_detail_img/detail_img/icon_heart.png);background-repeat: no-repeat;background-size: 100%;}
+.nav_icon_recommended{width:15px;height: 16px;background-image: url(../images/prj_detail_img/detail_img/icon_recommended.png);background-repeat: no-repeat;background-size: 100%;}
+
+/*导航首页按钮*/
+.nav_button{font-size: 1.3em;border: 1px solid #FFFFFF;width: 100px;margin: 0 auto;padding: 5px 8px;border-radius: 5px;bottom: 10px;}
+
+/*底部导航栏*/
+.detailFooter{position: fixed;height: 50px;background-color: #262626;}
+
+.footer_menu_home{display: inline-block;width:16px;height: 15px;background-image: url(../images/prj_detail_img/detail_img/icon_home.png);background-repeat: no-repeat;background-size: 100%;}
+.footer_menu_phone{display: inline-block;width:16px;height: 16px;background-image: url(../images/prj_detail_img/detail_img/icon_phone.png);background-repeat: no-repeat;background-size: 100%;}
+.footer_menu_location{display: inline-block;width:16px;height: 16px;background-image: url(../images/prj_detail_img/detail_img/icon_location.png);background-repeat: no-repeat;background-size: 100%;}
+.footer_menu_bubble{display: inline-block;width:18px;height: 18px;background-image: url(../images/prj_detail_img/detail_img/icon_bubble.png);background-repeat: no-repeat;background-size: 100%;}
+/*椭圆拨号*/
+.footer_menu_phone_1{width:16px;height: 16px;background-image: url(../images/prj_detail_img/detail_img/icon_phone.png);background-repeat: no-repeat;background-size: 100%;}
+
+
+/*头部*/
+.stop{border: 1px solid #FFFFFF;margin: 0 5px;}
+
+/*顶部返回*/
+.back_icon{margin-left: 10px;display: inline-block;width:25px;height: 25px;background-image: url(../images/prj_detail_img/detail_img/Back-26.png);background-repeat: no-repeat;vertical-align: middle;}
+.back_icon2{position: fixed;width:20px;height: 22px;background-image: url(../images/prj_detail_img/detail_img/Back-26.png);background-repeat: no-repeat;}
+
+
+a{text-decoration:none}
+a{text-decoration:none}
+a:link{text-decoration:none;color: #FFFFFF;}
+a:visited{text-decoration:none;color: #FFFFFF;}
+a:hover{text-decoration:none;color: #FFFFFF;}
+a:active{text-decoration:none;color: #FFFFFF;}
+
+/*
+.bgf5f5f5{background:#f5f5f5;}
+.bggreen{background-color:#edf5f8}
+.color_red{color: red;}*/
+
+.border-right{border-right:none!important;}
+.border-bottom{border-bottom:1px solid #e7e7e7;}
+
+.btn-large{padding:9px 14px;font-size:15px;line-height:normal;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+.btn-large [class^="icon-"]{margin-top:1px;}
+
+/*=======================================================================================================*/
+
+/*紫藤庄园周边配置正文*/
+.wis-configuration section p{margin-bottom: 14px;}
+
+/*玫瑰庄园&紫藤庄园--户型赏析页的展开icon*/
+.appreciation_icon{margin-top: 15px;display: inline-block;width:25px;height: 25px;background-image: url(../images/prj_detail_img/detail_img/down.png);background-repeat: no-repeat;background-size: 100%;}
+.appreciation_icon_up{margin-top: 15px;display: inline-block;width:25px;height: 25px;background-image: url(../images/prj_detail_img/detail_img/up.png);background-repeat: no-repeat;background-size: 100%;}
+
+/*玫瑰庄园周边配置正文*/
+.rose-configuration section li{list-style: none;}
+
+/*蔷薇国际--户型赏析页的展开icon*/
+.rosebush-appreciation_icon{margin-top: 7px;display: inline-block;width:25px;height: 25px;background-image: url(../images/prj_detail_img/detail_img/down.png);background-repeat: no-repeat;background-size: 100%;}
+.rosebush-appreciation_icon_up{margin-top: 7px;display: inline-block;width:25px;height: 25px;background-image: url(../images/prj_detail_img/detail_img/up.png);background-repeat: no-repeat;background-size: 100%;}
+
+/*蔷薇庄园周边配置正文*/
+.rosebush-configuration section li{list-style: none;}
+
+/*蔷薇国际*/
+.rosebush-appreciationNav div h2{vertical-align: middle;padding-bottom: 7px;}
+.rosebush-appreciationNav div h2:first-letter{font-size: 2.0em;margin-right: 10px;}
+
+.rose-appreciation_list ul,li{list-style: disc;}

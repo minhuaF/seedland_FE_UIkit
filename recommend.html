@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="utf-8">
+		<title>推荐客户</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+
+		<link rel="stylesheet" type="text/css" href=" css/highlight.css" />
+		<link rel="stylesheet" type="text/css" href=" css/uikit.css" />
+
+		<link rel="stylesheet" type="text/css" href=" css/base.css" />
+		<link rel="stylesheet" type="text/css" href=" css/style.css" />
+		<link rel="stylesheet" type="text/css" href=" css/common.css" />
+	</head>
+
+	<body>
+		<div class="width95">
+			<form class="uk-form">
+
+				<div class="uk-grid">
+
+					<div class="uk-width-1-12 uk-form-icon mt10">
+						<i class="uk-icon-user"></i>
+						<input type="text" placeholder="客户姓名" class="uk-form-large uk-width-1-1">
+					</div>
+
+					<div class="uk-width-1-12 uk-form-icon mt10 ">
+						<i class="uk-icon-phone "></i>
+						<input type="tel" placeholder="客户手机号" class="uk-form-large uk-width-1-1">
+					</div>
+
+					
+					<div class="uk-width-1-12 uk-form-icon mt10 " id="other_address" >
+						<div class="pl8" style="border: 1px solid #dddddd;background-color: #FFFFFF;">
+						<i class="uk-icon-home fc999"></i>
+						<select  class=" uk-form-large width94 fc999 " style="border:none;" >
+							<option>请选择意向楼盘</option>
+							<option>【实地】紫藤庄园</option>
+							<option>【实地】玫瑰庄园</option>
+							<option>【实地】蔷薇国际</option>
+						</select>
+						</div>
+					</div>
+					
+
+					<div class="uk-width-1-12 uk-form-icon mt10 ">
+						<div class="pl8 uk-form-large mh-m-div" id="open1">
+							<i class="uk-icon-building-o fc999"></i>
+							<p class="uk-display-inline-block fc999 width88 uk-vertical-align-middle" style="height: 23px;overflow:scroll;">户型：<span></span></p>
+							<i class="uk-icon-angle-down fc999 uk-float-right mt5"></i>
+						</div>
+						<div class="show show1 " style="display: none;">
+							<ul>
+								<li class="mh-no-limit">&nbsp;不&nbsp;&nbsp;限&nbsp;</li>
+								<li>两房一卫&nbsp;&nbsp;</li>
+								<li>三房一卫&nbsp;&nbsp;</li>
+								<li>三房两卫&nbsp;&nbsp;</li>
+								<li>四房两卫&nbsp;&nbsp;</li>
+								<li>四房三卫&nbsp;&nbsp;</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="uk-width-1-12 uk-form-icon mt10 ">
+						<div class="pl8 uk-form-large mh-m-div" id="open2">
+							<i class="uk-icon-asterisk fc999"></i>
+							<p class="uk-display-inline-block fc999 width88 uk-vertical-align-middle" style="height: 23px;overflow:scroll;">类别：<span></span></p>
+							<i class="uk-icon-angle-down fc999 uk-float-right mt5"></i>
+						</div>
+						<div class="show show2 " style="display: none;">
+							<ul>
+								<li class="mh-no-limit">&nbsp;不&nbsp;&nbsp;限&nbsp;</li>
+								<li>&nbsp;洋&nbsp;&nbsp;房&nbsp;&nbsp;&nbsp;</li>
+								<li>&nbsp;商&nbsp;&nbsp;铺&nbsp;&nbsp;&nbsp;</li>
+								<li>&nbsp;毛&nbsp;&nbsp;坯&nbsp;&nbsp;&nbsp;</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="uk-width-1-12 uk-form-icon mt10 ">
+						<div class="pl8 uk-form-large mh-m-div" id="open3">
+							<i class="uk-icon-area-chart fc999"></i>
+							<p class="uk-display-inline-block fc999 width88 uk-vertical-align-middle" style="height: 23px;overflow:scroll;">面积：<span></span></p>
+							<i class="uk-icon-angle-down fc999 uk-float-right mt5"></i>
+						</div>
+						<div class="show show3" style="display: none;">
+							<ul>
+								<li class="mh-no-limit">&nbsp;不&nbsp;&nbsp;限&nbsp;</li>
+								<li>85~100&nbsp;&nbsp;</li>
+								<li>100~109&nbsp;&nbsp;</li>
+								<li>109~130&nbsp;&nbsp;</li>
+								<li>130~150&nbsp;&nbsp;</li>
+								<li>150以上&nbsp;&nbsp;</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="uk-width-1-12 uk-form-icon mt10 ">
+						<div class="pl8 uk-form-large mh-m-div" id="open4">
+							<i class="uk-icon-building fc999"></i>
+							<p class="uk-display-inline-block fc999 width88 uk-vertical-align-middle" style="height: 23px;overflow:scroll;">楼层：<span></span></p>
+							<i class="uk-icon-angle-down fc999 uk-float-right mt5"></i>
+						</div>
+						<div class="show show4" style="display: none;">
+							<ul>
+								<li class="mh-no-limit">&nbsp;不&nbsp;&nbsp;限&nbsp;</li>
+								<li>1~5&nbsp;&nbsp;</li>
+								<li>6~10&nbsp;&nbsp;</li>
+								<li>11~15&nbsp;&nbsp;</li>
+								<li>16~20&nbsp;&nbsp;</li>
+								<li>21~25&nbsp;&nbsp;</li>
+								<li>26~30&nbsp;&nbsp;</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="uk-width-1-12 uk-form-icon mt10 ">
+						<div class="pl8 uk-form-large mh-m-div" id="open5">
+							<i class="uk-icon-arrows fc999"></i>
+							<p class="uk-display-inline-block fc999 width88 uk-vertical-align-middle" style="height: 23px;overflow:scroll;">其他：<span></span></p>
+							<i class="uk-icon-angle-down fc999 uk-float-right mt5"></i>
+						</div>
+						<div class="show show5" style="display: none;">
+							<ul>
+								<li class="mh-no-limit">&nbsp;不&nbsp;&nbsp;限&nbsp;</li>
+								<li>付款方式&nbsp;&nbsp;</li>
+								<li>开发商品牌&nbsp;&nbsp;</li>
+								<li>一级物业&nbsp;&nbsp;</li>
+								<li>小区规模&nbsp;&nbsp;</li>
+								<li>建筑外立面&nbsp;&nbsp;</li>
+								<li>商业配套&nbsp;&nbsp;</li>
+								<li>房型&nbsp;&nbsp;</li>
+								<li>园林景观&nbsp;&nbsp;</li>
+								<li>交通配套&nbsp;&nbsp;</li>
+								<li>教育配套&nbsp;&nbsp;</li>
+								<li>区域规划&nbsp;&nbsp;</li>
+								<li>升值潜力&nbsp;&nbsp;</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+							<button class="uk-button uk-button-primary uk-button-large uk-width-1-1 uk-margin-small-bottom mt20 pb4 button_active" type="submit">马上推荐</button>
+			</form>
+		</div>
+		<!--底部导航   <a>-->
+		<div class="mt100"></div>
+		<footer class="foot tc foot_rgba">
+			<div class="width95">
+				<a href="javascript:history.go(-1);" class="fl mt10 ">
+					<span class="go_back"><img src=" images/icon/icon-left-50.png" style="width:30px;"/></span>
+				</a>
+				<!--<a href="" class="start_button mt4 mb3 text-center">
+						立即兑换
+			    </a>-->
+				<a href="index.html" class="fr mt10">
+					<span class="home"><img src=" images/icon/icon-home-50.png" style="width:30px;"/></span>
+				</a>
+			</div>
+		</footer>
+	</body>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$(function() {
+			$('#open1').click(function() {
+				if ($('.show1').is(':hidden')) {
+					$('.show1').slideDown('slow');
+					$("#open1").find("i:last-child").removeClass("uk-icon-angle-down").addClass("uk-icon-angle-up");
+				} else {
+					$('.show1').slideUp('slow');
+					$("#open1").find("i:last-child").removeClass("uk-icon-angle-up").addClass("uk-icon-angle-down");
+				}
+			});
+		});
+		$(function() {
+			$('.show1 ul li').click(function() {
+				$(this).toggleClass("mh-active");
+				$("#open1 p span").text($(".show1 ul li.mh-active").text());
+			});
+		});
+	</script>
+	<script>
+		$(function() {
+			$('#open2').click(function() {
+				if ($('.show2').is(':hidden')) {
+					$('.show2').slideDown('slow');
+					$("#open2").find("i:last-child").removeClass("uk-icon-angle-down").addClass("uk-icon-angle-up");
+				} else {
+					$('.show2').slideUp('slow');
+					$("#open2").find("i:last-child").removeClass("uk-icon-angle-up").addClass("uk-icon-angle-down");
+				}
+			});
+		});
+		$(function() {
+			$('.show2 ul li').click(function() {
+				$(this).toggleClass("mh-active");
+				$("#open2 p span").text($(".show2 ul li.mh-active").text());
+			});
+		});
+	</script>
+	<script>
+		$(function() {
+			$('#open3').click(function() {
+				if ($('.show3').is(':hidden')) {
+					$('.show3').slideDown('slow');
+					$("#open3").find("i:last-child").removeClass("uk-icon-angle-down").addClass("uk-icon-angle-up");
+				} else {
+					$('.show3').slideUp('slow');
+					$("#open3").find("i:last-child").removeClass("uk-icon-angle-up").addClass("uk-icon-angle-down");
+				}
+			});
+		});
+		$(function() {
+			$('.show3 ul li').click(function() {
+				$(this).toggleClass("mh-active");
+				$("#open3 p span").text($(".show3 ul li.mh-active").text());
+			});
+		});
+	</script>
+	<script>
+		$(function() {
+			$('#open4').click(function() {
+				if ($('.show4').is(':hidden')) {
+					$('.show4').slideDown('slow');
+					$("#open4").find("i:last-child").removeClass("uk-icon-angle-down").addClass("uk-icon-angle-up");
+				} else {
+					$('.show4').slideUp('slow');
+					$("#open4").find("i:last-child").removeClass("uk-icon-angle-up").addClass("uk-icon-angle-down");
+				}
+			});
+		});
+		$(function() {
+			$('.show4 ul li').click(function() {
+				$(this).toggleClass("mh-active");
+				$("#open4 p span").text($(".show4 ul li.mh-active").text());
+			});
+		});
+	</script>
+	<script>
+		$(function() {
+			$('#open5').click(function() {
+				if ($('.show5').is(':hidden')) {
+					$('.show5').slideDown('slow');
+					$("#open5").find("i:last-child").removeClass("uk-icon-angle-down").addClass("uk-icon-angle-up");
+				} else {
+					$('.show5').slideUp('slow');
+					$("#open5").find("i:last-child").removeClass("uk-icon-angle-up").addClass("uk-icon-angle-down");
+				}
+			});
+		});
+		$(function() {
+			$('.show5 ul li').click(function() {
+				$(this).toggleClass("mh-active");
+				$("#open5 p span").text($(".show5 ul li.mh-active").text());
+			});
+		});
+	</script>
+
+</html>

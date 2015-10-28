@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+				<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+		<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+		<style type="text/css">
+			.recommend{width:90%;margin:0px auto;}
+			.recommend .input-div{border:1px solid #c7c7c7; display: inline-block; margin: 7px 0 0 0; vertical-align: top;width: 100%;border-radius:4px;}
+			.recommend .input-div .name{background-image: url(../images/ico-05.png);background-repeat:no-repeat;background-position: 5px center;border: none;height:40px; line-height:100%;width:90%; padding-left: 10%;font-size: 14px;font-weight: normal;border-radius:4px;;}
+			.recommend .input-div .phone{background-image: url(../images/ico-08.png);background-repeat:no-repeat;background-position: 5px center;border: none;height:40px; line-height:100%;width:90%; padding-left: 10%;font-size: 14px;font-weight: normal;border-radius:4px;}
+			
+			.recommend .address{background-image: url(../images/ico-06.png);background-repeat:no-repeat;background-position: 5px center;border:none;height:40px;line-height:100%;padding-left: 10%;width:100%;font-size: 14px;font-weight: normal;border-radius:4px;}
+			.recommend .area{background-image: url(../images/ico-07.png);background-repeat:no-repeat;background-position: 5px center;border: none;min-height:40px; line-height:100%;width:100%; padding-left: 10%;font-size: 14px;font-weight: normal;border-radius:4px;}
+			
+			.recommend .input-div .housefloor{background-image: url(../images/Building-22.png);background-repeat:no-repeat;background-position: 5px center;border: none;min-height:40px; line-height:100%;width:100%; padding-left: 10.2%;font-size: 14px;font-weight: normal;border-radius:4px;}
+			.recommend .input-div .floortype{background-image: url(../images/ico-010.png);background-repeat:no-repeat;background-position: 5px center;border: none;min-height:40px; line-height:100%;width:100%; padding-left: 10.2%;font-size: 14px;font-weight: normal;border-radius:4px;}
+			.recommend .input-div .housetype{background-image: url(../images/ico-11.png);background-repeat:no-repeat;background-position: 5px center;border: none;min-height:40px; line-height:100%;width:100%; padding-left: 10%;font-size: 14px;font-weight: normal;border-radius:4px;}
+			.recommend .input-div .housesquare{background-image: url(../images/ico-12.png);background-repeat:no-repeat;background-position: 5px center;border: none;min-height:40px; line-height:100%;width:100%; padding-left: 10.2%;font-size: 14px;font-weight: normal;border-radius:4px;}
+			
+			.recommend .input-div a span.hidden {display: none;}
+			
+			#item {margin-right: 10%;float: right;}
+			
+			.recommend_model{/*border: 1px solid black;*/padding: 3px 3px 3px 7px}
+			.recommend_model ul li{float: left;width: 21%;margin: 0 auto; text-align: center; border: 1px solid #A8A8A8;padding: 9px;margin-right: 5%;margin-bottom: 4%;background-color: #FFF;border-radius: 3px;}
+			#recommend_model .btn-group label{background-color: #fff;color: #000000;margin: 5px 10px 5px 5px;width: 26%;padding: 10px;border-radius: 3px;font-size: 1.0em;border: 1px solid #999999;}
+			#recommend_model .btn-primary.active{background-color: #81ccee}
+
+		</style>
+	</head>
+
+	<body>
+		<section class="animated fadeInDown">
+			<article class="recommend">
+
+				<div class="input-div mt15 floortype">
+					<a href="javascript:void(0)" id="choosefloortype" style="text-decoration:none;">
+						<p class="floortype" id="floortype" style="line-height:40px;color:#000;margin-bottom:0px;">
+							户型：<span id="apartmentvalue">不限</span>
+							<span id="floortypeexpand" style="float:right;color:#fff;min-height:40px; line-height:40px;border-left: 1px solid #c7c7c7;"><img src="images/expand.png"></span>
+							<span id="floortypecollapse" class="hidden" style="float:right;color:#fff;min-height:40px; line-height:40px;border-left: 1px solid #c7c7c7;"><img src="images/collapse.png"></span>
+						</p>
+					</a>
+				</div>
+				<div class="mt20 mb5" style="display:none;" id="floortypelist">
+					<div class="clearfix" id="recommend_model">
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-primary radio">
+								<input type="radio" autocomplete="off" name="radio" value="不限">不限
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="floortype_checkbox" value="两房一卫">两房一卫
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="floortype_checkbox" value="三房一卫">三房一卫
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="floortype_checkbox" value="三房两卫">三房两卫
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="floortype_checkbox" value="四房两卫">四房两卫
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="floortype_checkbox" value="四房三卫">四房三卫
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="input-div mt15 housetype">
+					<a href="javascript:void(0)" id="choosehousetype" style="text-decoration:none;">
+						<p class="housetype" id="housetype" style="line-height:40px;color:#000;margin-bottom:0px;">
+							类别：<span id="housetypevalue">不限</span>
+							<span id="housetypeexpand" style="float:right;color:#fff;min-height:40px; line-height:40px;border-left: 1px solid #c7c7c7;"><img src="images/expand.png"></span>
+							<span id="housetypecollapse" class="hidden" style="float:right;color:#fff;min-height:40px; line-height:40px;border-left: 1px solid #c7c7c7;"><img src="images/collapse.png"></span>
+						</p>
+					</a>
+				</div>
+
+				<div class="mt20 mb5" style="display:none;" id="housetypelist">
+					<div class="clearfix" id="recommend_model">
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-primary radio">
+								<input type="radio" autocomplete="off" name="houseradio" value="不限">不限
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="housetype_checkbox" value="洋房">洋房
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="housetype_checkbox" value="商铺">商铺
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="housetype_checkbox" value="毛坯">毛坯
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="input-div mt15 housesquare">
+					<a href="javascript:void(0)" id="choosehousesquare" style="text-decoration:none;">
+						<p class="housesquare" id="housesquare" style="line-height:40px;color:#000;margin-bottom:0px;">
+							面积：<span id="housesquarevalue">不限</span>
+							<span id="housesquareexpand" style="float:right;color:#fff;min-height:40px; line-height:40px;border-left: 1px solid #c7c7c7;"><img src="images/expand.png"></span>
+							<span id="housesquarecollapse" class="hidden" style="float:right;color:#fff;min-height:40px; line-height:40px;border-left: 1px solid #c7c7c7;"><img src="images/collapse.png"></span>
+						</p>
+					</a>
+				</div>
+
+				<div class="mt20 mb5" style="display:none;" id="housesquarelist">
+					<div class="clearfix" id="recommend_model">
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-primary radio">
+								<input type="radio" autocomplete="off" name="houseradio" value="不限">不限
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="housesquare_checkbox" value="85~100">85~100
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="housesquare_checkbox" value="100~109">100~109
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="housesquare_checkbox" value="109~130">109~130
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="housesquare_checkbox" value="130~150">130~150
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="housesquare_checkbox" value="150以上">150以上
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="input-div mt15 housefloor">
+					<a href="javascript:void(0)" id="choosehousefloor" style="text-decoration:none;">
+						<p class="housefloor" id="housefloor" style="line-height:40px;color:#000;margin-bottom:0px;">
+							楼层：<span id="housefloorvalue">不限</span>
+							<span id="housefloorexpand" style="float:right;color:#fff;min-height:40px; line-height:40px;border-left: 1px solid #c7c7c7;"><img src="images/expand.png"></span>
+							<span id="housefloorcollapse" class="hidden" style="float:right;color:#fff;min-height:40px; line-height:40px;border-left: 1px solid #c7c7c7;"><img src="images/collapse.png"></span>
+						</p>
+					</a>
+				</div>
+
+				<div class="mt20 mb5" style="display:none;" id="housefloorlist">
+					<div class="clearfix" id="recommend_model">
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-primary radio">
+								<input type="radio" autocomplete="off" name="houseradio" value="不限">不限
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="housefloor_checkbox" value="1~5">1~5
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="housefloor_checkbox" value="6~10">6~10
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="housefloor_checkbox" value="11~15">11~15
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="housefloor_checkbox" value="16~20">16~20
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="housefloor_checkbox" value="21~25">21~25
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="housefloor_checkbox" value="26~31">26~31
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="input-div mt15 other">
+					<a href="javascript:void(0)" id="chooseother" style="text-decoration:none;">
+						<p class="other" id="other" style="line-height:40px;color:#000;margin-bottom:0px;">
+							&nbsp;&nbsp;其他：<span id="othervalue">其他</span>
+							<span id="otherexpand" style="float:right;color:#fff;min-height:40px; line-height:40px;border-left: 1px solid #c7c7c7;"><img src="images/expand.png"></span>
+							<span id="othercollapse" class="hidden" style="float:right;color:#fff;min-height:40px; line-height:40px;border-left: 1px solid #c7c7c7;"><img src="images/collapse.png"></span>
+						</p>
+					</a>
+				</div>
+
+				<div class="mt20 mb5" style="display:none;" id="otherlist">
+					<div class="clearfix" id="recommend_model">
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-primary radio">
+								<input type="radio" autocomplete="off" name="otherradio" value="其他">其他
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="other_checkbox" value="付款方式">付款方式
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="other_checkbox" value="开发商品牌">开发商品牌
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="other_checkbox" value="一级物业">一级物业
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="other_checkbox" value="小区规模">小区规模
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="other_checkbox" value="建筑外立面">建筑外立面
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="other_checkbox" value="商业配套">商业配套
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="other_checkbox" value="房型">房型
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="other_checkbox" value="园林景观">园林景观
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="other_checkbox" value="交通配套">交通配套
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="other_checkbox" value="教育配套">教育配套
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="other_checkbox" value="区域规划">区域规划
+							</label>
+							<label class="btn btn-primary checkbox">
+								<input type="checkbox" autocomplete="off" name="other_checkbox" value="升值潜力">升值潜力
+							</label>
+						</div>
+					</div>
+				</div>
+				<br/>
+				<br/>
+				<div class="ml5 mt5">
+					<span id="commission" class="commission coloryellow" style="margin-bottom:-5px;font-size: 22px">预得佣金：<span id="yudeyongjin" style="color:red"></span></span>
+				</div>
+				<div class="mt25">
+					<button class="btn-red" id="J_submitRec">马上推荐</button>
+				</div>
+
+			</article>
+			<aside class="recommend-pop">
+				<div class="recommend-box">
+					<h1 class="recommend-title"></h1>
+					<div class="recommend-icon"></div>
+					<div class="recommend-text">
+						<p>感谢推荐，通过审核即可获取积分，辛苦啦</p>
+						<p class="user-get"></p>
+					</div>
+					<a href="{:site_url('customer')}" class="recommend-submit"><i class="recommend-ok"></i></a>
+				</div>
+			</aside>
+			<div class="pop-bg"></div>
+		</section>
+		<br/>
+<script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//初始化佣金
+				$('#yudeyongjin').text("{:$yudeyongjin}");
+				$('#p_id').change(function() {
+						//项目与佣金级联
+						if ($('#p_id').val() != "请选择意向项目") {
+							var p_id = $('#p_id').val();
+							$.get("index.php?c=recommend&f=get_value&p_id=" + p_id, function(data, status) {
+								if (status == 'success') {
+									var data = JSON.parse(data)
+									if (data.code != '0') {
+										sweetAlert("操作有误，请重新选择项目计算佣金！");
+									} else {
+										$('#yudeyongjin').text(data.msg.min);
+									}
+								} else {
+									sweetAlert("操作有误，请重新选择项目计算佣金！");
+								}
+							});
+						}
+					})
+					//收起户型选择框
+
+				function closefloortype() {
+						if (typeof($('span#floortypecollapse').attr('class')) == 'undefined') {
+							$('div#floortypelist').css('display', 'none');
+							var type = $('input:radio[name="radio"]:checked').val();
+							var isCheck = [];
+							$('input[name="floortype_checkbox"]:checked').each(function() {
+								isCheck.push($(this).parent('label.active').children().val());
+							});
+							if ($('.radio').hasClass('active')) {
+								$('span#apartmentvalue').text(type);
+							} else {
+								$('span#apartmentvalue').text(isCheck);
+							}
+							$('span#floortypecollapse').addClass('hidden');
+							$('span#floortypeexpand').removeAttr('class');
+						}
+					}
+					//收起类别选择框
+
+				function closehousetype() {
+						if (typeof($('span#housetypecollapse').attr('class')) == 'undefined') {
+							$('div#housetypelist').css('display', 'none');
+							var type = $('input:radio[name="houseradio"]:checked').val();
+							var isCheck = [];
+							$('input[name="housetype_checkbox"]:checked').each(function() {
+								isCheck.push($(this).parent('label.active').children().val());
+							});
+							if ($('.radio').hasClass('active')) {
+								$('span#housetypevalue').text(type);
+							} else {
+								$('span#housetypevalue').text(isCheck);
+							}
+							$('span#housetypecollapse').addClass('hidden');
+							$('span#housetypeexpand').removeAttr('class');
+						}
+					}
+					//收起面积选择框
+
+				function closehousesquare() {
+						if (typeof($('span#housesquarecollapse').attr('class')) == 'undefined') {
+							$('div#housesquarelist').css('display', 'none');
+							var type = $('input:radio[name="houseradio"]:checked').val();
+							var isCheck = [];
+							$('input[name="housesquare_checkbox"]:checked').each(function() {
+								isCheck.push($(this).parent('label.active').children().val());
+							});
+							if ($('.radio').hasClass('active')) {
+								$('span#housesquarevalue').text(type);
+							} else {
+								$('span#housesquarevalue').text(isCheck);
+							}
+							$('span#housesquarecollapse').addClass('hidden');
+							$('span#housesquareexpand').removeAttr('class');
+						}
+					}
+					//收起楼层选择框
+
+				function closehousefloor() {
+						if (typeof($('span#housefloorcollapse').attr('class')) == 'undefined') {
+							$('div#housefloorlist').css('display', 'none');
+							var type = $('input:radio[name="houseradio"]:checked').val();
+							var isCheck = [];
+							$('input[name="housefloor_checkbox"]:checked').each(function() {
+								isCheck.push($(this).parent('label.active').children().val());
+							});
+							if ($('.radio').hasClass('active')) {
+								$('span#housefloorvalue').text(type);
+							} else {
+								$('span#housefloorvalue').text(isCheck);
+							}
+							$('span#housefloorcollapse').addClass('hidden');
+							$('span#housefloorexpand').removeAttr('class');
+						}
+					}
+					//收起其他选择框
+
+				function closeother() {
+						if (typeof($('span#othercollapse').attr('class')) == 'undefined') {
+							$('div#otherlist').css('display', 'none');
+							var type = $('input:radio[name="houseradio"]:checked').val();
+							var isCheck = [];
+							$('input[name="other_checkbox"]:checked').each(function() {
+								isCheck.push($(this).parent('label.active').children().val());
+							});
+							if ($('.radio').hasClass('active')) {
+								$('span#othervalue').text(type);
+							} else {
+								$('span#othervalue').text(isCheck);
+							}
+							$('span#othercollapse').addClass('hidden');
+							$('span#otherexpand').removeAttr('class');
+						}
+					}
+					//户型选择
+				$('a#choosefloortype').click(function() {
+					if (typeof($('span#floortypecollapse').attr('class')) == 'undefined') {
+						//收起户型选择框
+						$('div#floortypelist').css('display', 'none');
+						var type = $('input:radio[name="radio"]:checked').val();
+						var isCheck = [];
+						$('input[name="floortype_checkbox"]:checked').each(function() {
+							isCheck.push($(this).parent('label.active').children().val());
+						});
+						if ($('.radio').hasClass('active')) {
+							$('span#apartmentvalue').text(type);
+						} else {
+							$('span#apartmentvalue').text(isCheck);
+						}
+						$('span#floortypecollapse').addClass('hidden');
+						$('span#floortypeexpand').removeAttr('class');
+					} else if (typeof($('span#floortypeexpand').attr('class')) == 'undefined') {
+						//打开户型选择框
+						$('div#floortypelist').css('display', 'block');
+						$('span#floortypecollapse').removeAttr('class');
+						$('span#floortypeexpand').addClass('hidden');
+						//收起面积选择框
+						closehousesquare();
+						//收起类别选择框
+						closehousetype();
+						//收起楼层选择框
+						closehousefloor();
+						//收起其他选择框
+						closeother();
+					}
+				});
+				//房屋类别选择
+				$('a#choosehousetype').click(function() {
+					if (typeof($('span#housetypecollapse').attr('class')) == 'undefined') {
+						//收起房屋类型选择框
+						$('div#housetypelist').css('display', 'none');
+						var type = $('input:radio[name="houseradio"]:checked').val();
+						var isCheck = [];
+						$('input[name="housetype_checkbox"]:checked').each(function() {
+							isCheck.push($(this).parent('label.active').children().val());
+						});
+						if ($('.radio').hasClass('active')) {
+							$('span#housetypevalue').text(type);
+						} else {
+							$('span#housetypevalue').text(isCheck);
+						}
+						$('span#housetypecollapse').addClass('hidden');
+						$('span#housetypeexpand').removeAttr('class');
+					} else if (typeof($('span#housetypeexpand').attr('class')) == 'undefined') {
+						//打开房屋类型选择框
+						$('div#housetypelist').css('display', 'block');
+						$('span#housetypecollapse').removeAttr('class');
+						$('span#housetypeexpand').addClass('hidden');
+						//收起户型选择框
+						closefloortype();
+						//收起面积选择框
+						closehousesquare();
+						//收起楼层选择框
+						closehousefloor();
+						//收起其他选择框
+						closeother();
+					}
+				});
+				//面积选择
+				$('a#choosehousesquare').click(function() {
+					if (typeof($('span#housesquarecollapse').attr('class')) == 'undefined') {
+						//收起面积选择框
+						$('div#housesquarelist').css('display', 'none');
+						var type = $('input:radio[name="radio"]:checked').val();
+						var isCheck = [];
+						$('input[name="housesquare_checkbox"]:checked').each(function() {
+							isCheck.push($(this).parent('label.active').children().val());
+						});
+						if ($('.radio').hasClass('active')) {
+							$('span#housesquarevalue').text(type);
+						} else {
+							$('span#housesquarevalue').text(isCheck);
+						}
+						$('span#housesquarecollapse').addClass('hidden');
+						$('span#housesquareexpand').removeAttr('class');
+					} else if (typeof($('span#housesquareexpand').attr('class')) == 'undefined') {
+						//打开面积选择框
+						$('div#housesquarelist').css('display', 'block');
+						$('span#housesquarecollapse').removeAttr('class');
+						$('span#housesquareexpand').addClass('hidden');
+						//收起房屋类型选择框
+						closehousetype();
+						//收起户型选择框
+						closefloortype();
+						//收起楼层选择框
+						closehousefloor();
+						//收起其他选择框
+						closeother();
+					}
+				});
+				//楼层选择
+				$('a#choosehousefloor').click(function() {
+					if (typeof($('span#housefloorcollapse').attr('class')) == 'undefined') {
+						//收起楼层选择框
+						$('div#housefloorlist').css('display', 'none');
+						var type = $('input:radio[name="radio"]:checked').val();
+						var isCheck = [];
+						$('input[name="housefloor_checkbox"]:checked').each(function() {
+							isCheck.push($(this).parent('label.active').children().val());
+						});
+						if ($('.radio').hasClass('active')) {
+							$('span#housefloorvalue').text(type);
+						} else {
+							$('span#housefloorvalue').text(isCheck);
+						}
+						$('span#housefloorcollapse').addClass('hidden');
+						$('span#housefloorexpand').removeAttr('class');
+					} else if (typeof($('span#housefloorexpand').attr('class')) == 'undefined') {
+						//打开楼层选择框
+						$('div#housefloorlist').css('display', 'block');
+						$('span#housefloorcollapse').removeAttr('class');
+						$('span#housefloorexpand').addClass('hidden');
+						//收起房屋类型选择框
+						closehousetype();
+						//收起户型选择框
+						closefloortype();
+						//收起面积选择框
+						closehousesquare();
+						//收起其他选择框
+						closeother();
+					}
+				});
+				//其他选择
+				$('a#chooseother').click(function() {
+					if (typeof($('span#othercollapse').attr('class')) == 'undefined') {
+						//收起楼层选择框
+						$('div#otherlist').css('display', 'none');
+						var type = $('input:radio[name="radio"]:checked').val();
+						var isCheck = [];
+						$('input[name="other_checkbox"]:checked').each(function() {
+							isCheck.push($(this).parent('label.active').children().val());
+						});
+						if ($('.radio').hasClass('active')) {
+							$('span#othervalue').text(type);
+						} else {
+							$('span#othervalue').text(isCheck);
+						}
+						$('span#othercollapse').addClass('hidden');
+						$('span#otherexpand').removeAttr('class');
+					} else if (typeof($('span#otherexpand').attr('class')) == 'undefined') {
+						//打开楼层选择框
+						$('div#otherlist').css('display', 'block');
+						$('span#othercollapse').removeAttr('class');
+						$('span#otherexpand').addClass('hidden');
+						//收起房屋类型选择框
+						closehousetype();
+						//收起户型选择框
+						closefloortype();
+						//收起面积选择框
+						closehousesquare();
+						//收起楼层选择框
+						closehousefloor();
+					}
+				});
+				//点击提交按钮时触发事件
+				$('#J_submitRec').click(function() {
+					//收起户型选择框
+					closefloortype();
+					//收起面积选择框
+					closehousesquare();
+					//收起类别选择框
+					closehousetype();
+					//收起楼层
+					closehousefloor();
+					//收起其他选择框
+					closeother();
+				});
+				//点击多选框时自动取消选择单选框
+				$('.checkbox').click(function() {
+					$('.radio').removeClass('active');
+				});
+			});
+		</script>
+
+	</body>
+
+</html>

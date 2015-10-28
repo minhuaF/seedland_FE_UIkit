@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8">
+		<title>兑换地址</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+
+		<link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+		<link rel="stylesheet" type="text/css" href="../css/uikit.css" />
+
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	</head>
+	<body>
+		<article id="address">
+			<h2 class="width95 f16 fcyellow mt15 pb4">线下兑换地址</h2>
+			<hr />
+			<section class="width95 pt8 pb8" onclick="change(this);">
+				<h2 class=" width88 uk-display-inline-block uk-vertical-align-middle f14 ">广州市天河区体育路天河区体育路XXX商城漫步者专柜</h2>
+				<p class=" uk-display-inline-block uk-vertical-align-middle width10"><i class="uk-icon-check uk-icon-large fcyellow"></i></p>
+			</section>
+			<hr />
+			<section class="width95 pt8 pb8" onclick="change(this);">
+				<h2 class=" width88 uk-display-inline-block uk-vertical-align-middle f14 ">广州市天河区体育路天河区体育路XXX商城漫步者专柜</h2>
+				<p class=" uk-display-inline-block uk-vertical-align-middle width10"><i class="uk-icon-check uk-icon-large fcyellow" style="display: none;"></i></p>
+			</section>
+			<hr />
+			<section class="width95 pt8 pb8" onclick="change(this);">
+				<h2 class=" width88 uk-display-inline-block uk-vertical-align-middle f14 ">广州市天河区体育路天河区体育路XXX商城漫步者专柜</h2>
+				<p class=" uk-display-inline-block uk-vertical-align-middle width10" ><i class="uk-icon-check uk-icon-large fcyellow " style="display: none;"></i></p>
+			</section>
+			<hr />
+			
+		</article>
+		<!--底部导航   <a>-->
+		<div class="mt100"></div>
+		<footer class="foot tc foot_rgba">
+			<div class="width95">
+				<a href="javascript:history.go(-1);" class="fl mt10 ">
+					<span class="go_back"><img src="../images/icon/icon-left-50.png" style="width:30px;"/></span>
+				</a>
+				<a href="" class="start_button mt4 mb3 text-center fcwhite">
+						确认
+			    </a>
+				<a href="../index.html" class="fr mt10">
+					<span class="home"><img src="../images/icon/icon-home-50.png" style="width:30px;"/></span>
+				</a>
+			</div>
+		</footer>
+	</body>
+	<script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+			$(function() {
+				$("#address section").click(function() {
+					$("#address section p i").css("display","none");
+					$(this).find("i").css("display","block");
+					$(this).attr("checked","checked");
+				});
+			});
+			function change(i) {}
+		</script>
+</html>

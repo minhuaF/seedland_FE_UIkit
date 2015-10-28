@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="bg">
+
+<head>
+		<meta charset="utf-8">
+		<title>消息中心</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+
+		<link rel="stylesheet" type="text/css" href=" css/highlight.css" />
+		<link rel="stylesheet" type="text/css" href=" css/uikit.css" />
+
+		<link rel="stylesheet" type="text/css" href=" css/base.css" />
+		<link rel="stylesheet" type="text/css" href=" css/style.css" />
+		<link rel="stylesheet" type="text/css" href=" css/common.css" />
+		<script type="text/javascript">
+			window.onload = function(){ 
+			var btn = document.getElementById("btn");
+			var flt = document.getElementsByTagName('div')[0]; 
+			btn.onclick = function(){ 
+			event.cancelBubble = true; 
+			var x = btn.offsetLeft - 20 + 'px'; 
+			var y = btn.offsetTop + 30 + 'px'; 
+			flt.style.top = y; 
+			flt.style.left = x; 
+			flt.style.display = 'block'; 
+			} 
+			document.onclick = function(){ 
+			flt.style.display = 'none'; 
+			} 
+			}
+		</script>
+	</head>
+
+	<body >
+		<div id="nav">
+			<div class="demo clearfix fr">
+				<span class="triangle right"></span>
+				<div class="article">
+					<a href="" class="fcwhite">
+					一键已读
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="msg_center_back">
+			<a href="index.html"><span class="back"></span></a>
+			消息中心
+			<p class="uk-float-right"  id="btn"><span class="menu"></span></p>
+		</div>
+		<section id="message_center" class="width95 mt30">
+			<div  class="uk-text-center">
+				<p class="clock"></p>
+				2015-08-15
+			</div>
+			<div class="tips bgwhite pt12 pb12 pl9 pr9" >
+				<a href="msg_center_detail.html"  class="fc999">
+					<h2>添加积分成功</h2>
+					<p>你有11积分到账啦！小积分刮100元购有11积分到账啦！小积分刮100元购物券，跨店通用折上折，速来</p>
+					<p class="more">查看详情 </p>
+				</a>
+			</div>
+		</section>
+		<section id="message_center" class="width95 mt30">
+			<div  class="uk-text-center">
+				<p class="clock"></p>
+				2015-08-15
+			</div>
+			<div class="tips bgwhite pt12 pb12 pl9 pr9" >
+				<a href="msg_center_detail.html"  class="fc999">
+					<h2 >添加积分成功</h2>
+					<p>你有11积分到账啦！小积分刮100元购有11积分到账啦！小积分刮100元购物券，跨店通用折上折，速来</p>
+					<p class="more">查看详情 </p>
+				</a>
+			</div>
+		</section>
+	</body>
+</html>

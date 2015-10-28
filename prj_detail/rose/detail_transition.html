@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class=" rose-bcred ">
+	<head>
+		<meta charset="utf-8">
+		<title>实地 • 玫瑰庄园</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+			
+		<link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/uikit.css" />
+		
+		<link href="../../css/base.css" rel="stylesheet">
+		<link href="../../css/style_detail.css" rel="stylesheet">
+		<script src="../../js/jquery.js" type="text/javascript" ></script>
+		<script type="text/javascript">
+			function changePic1(){
+				$("#logo").attr("src","../../images/prj_detail_img/detail_img_rose/rose_60.png");
+				$("#num").text("60%");
+			}
+			function changePic2(){
+				$("#logo").attr("src","../../images/prj_detail_img/detail_img_rose/rose_100.png");
+				$("#num").text("100%");
+			}
+			function stop(){
+				location.href = "detail_nav.html";
+			}
+			$(document).ready(function(){
+				setTimeout("changePic1();",500);
+				setTimeout("changePic2();",1000);
+				setTimeout("stop();",1500);
+			})
+		</script>
+		
+	</head>
+	<body >
+		<div class=" mt30 ml25 mb60 width30">
+			<img src="../../images/prj_detail_img/detail_img/shidi_logo.png" class="width100" />
+		</div>
+		<section >
+			<div class=" width45 ">
+				<img src="../../images/prj_detail_img/detail_img_rose/rose_20.png" id="logo" class="width100"/>
+			</div>
+			<h2 class="uk-text-center f25 mt20 fcgold mb10" id="num">20%</h2>
+			<p class="fcgold uk-text-center letterSpacing">
+				LOADING
+			</p>
+		</section>
+	</body>
+
+</html>
